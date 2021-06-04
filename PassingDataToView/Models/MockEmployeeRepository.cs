@@ -7,10 +7,10 @@ namespace PassingDataToView.Models
 {
     public class MockEmployeeRepository: IEmployeeRepository
     {
-        private List<Employee> _employee;
+        private List<Employee> _employeeList;
         public MockEmployeeRepository()
         {
-            _employee = new List<Employee>()
+            _employeeList = new List<Employee>()
             {
                 new Employee() { Id = 1, Name = "Shiva", Department = "HR", EMail = "Shiva@gmail.comm" },
                 new Employee() { Id = 2, Name = "Ram", Department = "Manager", EMail = "Ram@gmail.comm" },
@@ -21,7 +21,7 @@ namespace PassingDataToView.Models
 
         public Employee GetEmployee(int Id)
         {
-            throw new NotImplementedException();
+            return _employeeList.FirstOrDefault(e => e.Id == Id);
         }
     }
 }

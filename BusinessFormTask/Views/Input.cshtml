@@ -1,0 +1,15 @@
+﻿@model BusinessFormTask.Models.PersonPropertie
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><title></title></head>
+    <body>
+        <section>
+            <h1>This  is My First approach</h1>
+            @using (Html.BeginForm("Index", "Input"))
+            {
+                @Html.TextBoxFor(x=>x.PersonFullName)<br />
+                @Html.TextBoxFor(x=>x.PersonEmail)<br />
+                <input type="submit" value="Submit" />
+            }
+        </section>
+    </body>
+</html>

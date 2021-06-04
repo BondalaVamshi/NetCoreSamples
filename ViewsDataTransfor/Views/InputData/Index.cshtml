@@ -1,0 +1,148 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>hello</h1>
+@model ViewsDataTransfor.Models.PersonPropertie
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @*<section>
+            <h2>InputData</h2>
+            @using (Html.BeginForm("Output", "InputData",FormMethod.Post)) {
+                @Html.TextBoxFor(x=>x.PersonFullName)<br />
+                @Html.TextBoxFor(x=>x.PersonEmail)<br />
+                <br />
+                <input type="submit" value="ClickMe" />
+            }
+        </section>*@
+    <section>
+        @*<div class="form-group row">*@ 
+            @using (Html.BeginForm("Output", "InputData"@*, FormMethod.Post*@))
+            {
+                <form method="post">
+                    <div class="border container" style="padding:10px;">
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonFullName"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonFullName" class="form-control" />
+                                <span asp-validation-for="PersonFullName" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonEmail"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonEmail" class="form-control" />
+                                <span asp-validation-for="PersonEmail" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonPhoneNumber"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonPhoneNumber" class="form-control" />
+                                <span asp-validation-for="PersonPhoneNumber" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonPlan"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonPlan" class="form-control" />
+                                <span asp-validation-for="PersonPlan" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonBillingIntervel"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonBillingIntervel" class="form-control" />
+                                <span asp-validation-for="PersonBillingIntervel" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonStreetAddress"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonStreetAddress" class="form-control" />
+                                <span asp-validation-for="PersonStreetAddress" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonCity"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonCity" class="form-control" />
+                                <span asp-validation-for="PersonCity" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonState"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonState" class="form-control" />
+                                <span asp-validation-for="PersonState" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonPostalCode"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonPostalCode" class="form-control" />
+                                <span asp-validation-for="PersonPostalCode" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonCountry"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonCountry" class="form-control" />
+                                <span asp-validation-for="PersonCountry" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonOldPassword"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonOldPassword" class="form-control" />
+                                <span asp-validation-for="PersonOldPassword" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3">
+                                <label asp-for="PersonNewPassword"></label>
+                            </div>
+                            <div class="col-4">
+                                <input asp-for="PersonNewPassword" class="form-control" />
+                                <span asp-validation-for="PersonNewPassword" class="text-denger"></span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <button type="submit" class="btn btn-primary form-control">ClickMe</button>
+
+                        </div>
+
+                    </div>
+                </form>
+
+            }
+        @*</div>*@
+    </section>
+</body>
+</html>
