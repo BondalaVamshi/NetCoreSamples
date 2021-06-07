@@ -10,11 +10,21 @@ namespace BusinessFormTask.Controllers
 {
     public class InputDataController : Controller
     {
+        [BindProperty]
+        public PersonPropertie PersonPropertie { get; set; }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public string Output(PersonPropertie person)
         {
-            string Name = person.PersonFullName;
-            string EMail = person.PersonEmail;
-            return "Name: " + Name + "EMail: " + EMail;
+            if (ModelState.IsValid)
+            {
+
+                string Name = person.PersonFullName;
+                string EMail = person.PersonEmail;
+                return "Name: " + Name + "EMail: " + EMail;
+            }
+            return "Give Proper input";
         }
         public IActionResult Index()
         {

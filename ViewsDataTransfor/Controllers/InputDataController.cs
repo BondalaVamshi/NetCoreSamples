@@ -11,21 +11,46 @@ namespace ViewsDataTransfor.Controllers
 {
     public class InputDataController : Controller
     {
-        
-        public string Output(InputDataOutput  inputOutput)
-        {
-            InputDataOutput inputDataOutput = new InputDataOutput()
-            {
-                PersonPropertie = inputOutput.PersonFullName
-            };
-            return "Heloo";
-            //string Name = inputDataOutput.PersonFullName;
-            //string EMail = person.PersonEmail;
-            //return "Name: " + Name + "EMail: " + EMail;
-        }
         public IActionResult Index()
+        {            
+            InputDataOutput inputDataOutput = new InputDataOutput();
+            return View(inputDataOutput);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SubmitPerson(InputDataOutput inputDataOutput)
         {
+            if (ModelState.IsValid)
+            {
+                TempData["inputOutput"] = inputDataOutput;
+                return Redirect("/InputData/OutputView");
+            }
+            else
+            {
+                return View();
+            }
+        }        
+        public IActionResult PersonDetails()
+        {
+            return Redirect("/InputData/OutputView");
+        }        
+        public IActionResult BusinessDetails()
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
             return View();
+        }
+        public IActionResult OutputView()
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View();
+            //TempData["inputOutput"] = inputDataOutput;
+            // InputDataOutput inputDataOutput = TempData["inputOutput"] as InputDataOutput;
         }
     }
 }

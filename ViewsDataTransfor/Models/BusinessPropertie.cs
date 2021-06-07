@@ -8,12 +8,18 @@ namespace ViewsDataTransfor.Models
 {
     public class BusinessPropertie
     {
+        [Required(ErrorMessage ="Please enter")]
+        public string TestValid { get; set; }
+        [Required(ErrorMessage = "Please enter FullName")]
+        [DataType(DataType.Text)]
+        [Display(Name = "BusinessFullName")]
+        [MaxLength(100), MinLength(1)]
+        public string BusinessFullName { get; set; }
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Please enter Email ID")]
-        //@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
         [RegularExpression(@"^[0-9A-Za-z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z0-9]+[.][a-zA-Z]{2.3}([a-zA-Z]{2,3}){0,1}", ErrorMessage = "Email is not valid.")]
         public string BusinessEmail { get; set; }
-
+        //BusinessFullName
         [Required]
         [RegularExpression(@"^(\d{10})$", ErrorMessage = "Please enter PhoneNumber")]
         [DataType(DataType.PhoneNumber)]
@@ -21,21 +27,20 @@ namespace ViewsDataTransfor.Models
         [Required(ErrorMessage = "Please Enter Your Plan")]
         public string BusinessPlan { get; set; }
         [Required(ErrorMessage = "Please enter Intervel"), MaxLength(30)]
-        public string BusinessBillingIntervel { get; set; }
+        public Intervel BusinessBillingIntervel { get; set; }
         [Required(ErrorMessage = "Please Enter Street address")]
         public string BusinessStreetAddress { get; set; }
         [Required(ErrorMessage = "Please Enter City")]
-        public string BusinessCity { get; set; }
+        public City BusinessCity { get; set; }
         [Required(ErrorMessage = "Please Enter state")]
-        public string BusinessState { get; set; }
+        public State BusinessState { get; set; }
         [Required(ErrorMessage = "Please Enter PinCode")]
         public string BusinessPostalCode { get; set; }
         [Required(ErrorMessage = "Please Enter country")]
-        public string BusinessCountry { get; set; }
+        public Country BusinessCountry { get; set; }
         [Required(ErrorMessage = "Please Enter OldPassword")]
         public string BusinessOldPassword { get; set; }
         [Required(ErrorMessage = "Please Ente NewPAssword")]
-        // [Compare(nameof(OldPassword), ErrorMessage = "Passwords don't match.")]
         public string BusinessNewPassword { get; set; }
 
     }

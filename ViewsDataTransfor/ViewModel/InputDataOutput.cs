@@ -8,9 +8,8 @@ namespace ViewsDataTransfor.ViewModel
 {
     public class InputDataOutput
     {
+        public PersonPropertie PersonProperties { get; set; }
+        public BusinessPropertie BusinessProperties { get; set; }
        
-
-        public PersonPropertie PersonPropertie { get; set; }
-        public BusinessPropertie BusinessPropertie { get; set; }
     }
 }
