@@ -30,15 +30,15 @@ namespace BusinessFormTask.Models
         public string PersonBillingIntervel { get; set; }
         [Required(ErrorMessage = "Please Enter Street address")]
         public string PersonStreetAddress { get; set; }
-        [Required(ErrorMessage = "Please Enter City")]
+        //[Required(ErrorMessage = "Please Enter City")]
         public string PersonCity { get; set; }
-        [Required(ErrorMessage = "Please Enter state")]
+        //[Required(ErrorMessage = "Please Enter state")]
         public string PersonState { get; set; }
-        [Required(ErrorMessage = "Please Enter PinCode")]
+        //[Required(ErrorMessage = "Please Enter PinCode")]
         public string PersonPostalCode { get; set; }
-        [Required(ErrorMessage = "Please Enter country")] public string PersonCountry { get; set; }
-        [Required(ErrorMessage = "Please Enter OldPassword")] public string PersonOldPassword { get; set; }
-        [Required(ErrorMessage = "Please Ente NewPAssword")]
+        //[Required(ErrorMessage = "Please Enter country")] public string PersonCountry { get; set; }
+        //[Required(ErrorMessage = "Please Enter OldPassword")] public string PersonOldPassword { get; set; }
+        //[Required(ErrorMessage = "Please Ente NewPAssword")]
         // [Compare(nameof(OldPassword), ErrorMessage = "Passwords don't match.")]
         public string PersonNewPassword { get; set; }
 

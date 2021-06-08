@@ -4,22 +4,36 @@
 @{
 }
 @model ViewsDataTransfor.ViewModel.InputDataOutput
-@{
-    ViewBag.Title = "Business  Summary";
-}
 
-@if (Model != null) { 
-<div>
-<div>BusinessDetails</div>
-<div>Name: @Model.BusinessProperties.BusinessFullName</div>
-<div>Name: @Model.BusinessProperties.BusinessEmail</div>
-</div>
-<div>
-    <div>Persondetails</div>
-    <div>Name: @Model.PersonProperties.PersonFullName</div>
-    <div>EMail: @Model.PersonProperties.PersonEmail</div>
-</div>  }
-            else
-            {
-<h2>Bussiness summary is not found</h2>
-            }
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <div class="form-group row">
+            <div class="col-6">
+                <div class="border container">
+                    @{ Html.RenderPartial("PersonOutputView", Model.PersonProperties);}
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="border container">
+                    @{ Html.RenderPartial("BusinessOutputView", Model.BusinessProperties);}
+                </div>
+            </div>
+
+        </div>
+       
+        <div class="col-3">
+            @*<input type="submit" value="Submit" class="btn btn-success" />*@
+            @*<a href="InputData/BusinessDetails"> Edit </a>
+            <a asp-action="submit"><input class="btn btn-primary" value="submit" /></a>
+            <button type="button" onclick="location.href = '@Url.Action("BusinessOutputView", "InputData")'">Submit</button>*@
+        </div>
+        <div class="col-9"></div>
+       
+    </div>
+    </div>
+</body>
+</html>

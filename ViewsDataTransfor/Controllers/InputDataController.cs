@@ -11,46 +11,43 @@ namespace ViewsDataTransfor.Controllers
 {
     public class InputDataController : Controller
     {
+        
+
+
         public IActionResult Index()
         {            
             InputDataOutput inputDataOutput = new InputDataOutput();
             return View(inputDataOutput);
         }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult SubmitPerson(PersonPropertie personPropertie)
+        //{
+        //    InputDataOutput inputDataOutput = new InputDataOutput();
+        //    return Redirect("/InputData/OutputView");
+            
+        //}
+        [HttpPost]
+s
+        public IActionResult PersonOutputView(PersonPropertie person)
+        {
+            //InputDataOutput inputDataOutput = TempData["inputOutput"] as InputDataOutput;
+            //TempData["inputOutput"] = inputDataOutput;
+            return View(person);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SubmitPerson(InputDataOutput inputDataOutput)
+        public IActionResult BusinessOutputView(BusinessPropertie business)
         {
-            if (ModelState.IsValid)
-            {
-                TempData["inputOutput"] = inputDataOutput;
-                return Redirect("/InputData/OutputView");
-            }
-            else
-            {
-                return View();
-            }
-        }        
-        public IActionResult PersonDetails()
-        {
-            return Redirect("/InputData/OutputView");
-        }        
+            return View(business);
+        }
+        //public IActionResult PersonDetails()
+        //{
+        //    return Redirect("/InputData/BusinessDetails");
+        //}        
         public IActionResult BusinessDetails()
         {
-            if (ModelState.IsValid)
-            {
-
-            }
-            return View();
-        }
-        public IActionResult OutputView()
-        {
-            if (ModelState.IsValid)
-            {
-
-            }
-            return View();
-            //TempData["inputOutput"] = inputDataOutput;
-            // InputDataOutput inputDataOutput = TempData["inputOutput"] as InputDataOutput;
+            return Redirect("/InputData/OutputView");
         }
     }
 }

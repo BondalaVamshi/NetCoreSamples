@@ -3,79 +3,79 @@
 *@
 @{
 }
-@model ViewsDataTransfor.ViewModel.InputDataOutput;
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    @using (Html.BeginForm("SubmitPerson", "InputData", FormMethod.Post))
+@model ViewsDataTransfor.Models.PersonPropertie;
+    :
+
+    @using (Html.BeginForm("PersonOutputView", "InputData", FormMethod.Post))
     {
-        <div class="text-denger" asp-validation-summary="ModelOnly"></div>
+        <div class="text-denger" asp-validation-summary="All"></div>
         <h1>Person Details</h1>
         <div class="form-group row">
             <div class="col-6">
-                <h6>Name</h6>
+
+                <label asp-for="PersonFullName" class="control-label"></label>
+                @*<h6>Name</h6>*@
             </div>
             <div class="col-12">
-                <input asp-for="PersonProperties.PersonFullName" class="form-control" />
-                <span asp-validation-for="PersonProperties.PersonFullName" class="text-denger"></span>
+                <input asp-for="PersonFullName" class="form-control" />
+                <span asp-validation-for="PersonFullName" class="text-denger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-6">
-                <h6>EMail</h6>
+                <label asp-for="PersonEmail" class="control-label"></label>
             </div>
             <div class="col-12">
-                <input asp-for="PersonProperties.PersonEmail" class="form-control" />
-                <span asp-validation-for="PersonProperties.PersonEmail" class="text-denger"></span>
+                <input asp-for="PersonEmail" class="form-control" />
+                <span asp-validation-for="PersonEmail" class="text-denger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-6">
-                <h6>Phone Number</h6>
+                <label asp-for="PersonPhoneNumber" class="control-label"></label>
             </div>
             <div class="col-12">
-                <input asp-for="PersonProperties.PersonPhoneNumber" class="form-control" />
-                <span asp-validation-for="PersonProperties.PersonPhoneNumber" class="text-denger"></span>
+                <input asp-for="PersonPhoneNumber" class="form-control" />
+                <span asp-validation-for="PersonPhoneNumber" class="text-denger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-6">
-                <h6>Plan</h6>
+                <label asp-for="PersonPlan" class="control-label"></label>
             </div>
             <div class="col-12">
-                <input asp-for="PersonProperties.PersonPlan" class="form-control" />
-                <span asp-validation-for="PersonProperties.PersonPlan" class="text-denger"></span>
+                <input asp-for="PersonPlan" class="form-control" />
+                <span asp-validation-for="PersonPlan" class="text-denger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-6">
-                <h6>Billing Intervel</h6>
+                <label asp-for="PersonBillingIntervel" class="control-label"></label>
             </div>
             <div class="col-6">
-                <select asp-for="PersonProperties.PersonBillingIntervel" class="form-control" asp-items="Html.GetEnumSelectList<Intervel>()">
+                <select asp-for="PersonBillingIntervel" class="form-control" asp-items="Html.GetEnumSelectList<Intervel>()">
                     <option selected="selected" value="">Please select</option>
                 </select>
+
             </div>
         </div>
         <div class="form-group row">
             <div class="col-6">
                 <div class="col-12">
-                    <h6>Country</h6>
+                    <label asp-for="PersonCountry" class="control-label"></label>
                 </div>
                 <div class="col-12">
-                    <select asp-for="PersonProperties.PersonCountry" class="form-control" asp-items="Html.GetEnumSelectList<Country>()">
+                    <select asp-for="PersonCountry" class="form-control" asp-items="Html.GetEnumSelectList<Country>()">
                         <option selected="selected" value="">Please select</option>
                     </select>
                 </div>
             </div>
             <div class="col-6">
                 <div class="col-12">
-                    <h6>State</h6>
+                    <label asp-for="PersonState" class="control-label"></label>
                 </div>
                 <div class="col-12">
-                    <select asp-for="PersonProperties.PersonState" class="form-control" asp-items="Html.GetEnumSelectList<State>()">
+                    <select asp-for="PersonState" class="form-control" asp-items="Html.GetEnumSelectList<State>()">
                         <option selected="selected" value="">Please select</option>
                     </select>
                 </div>
@@ -84,32 +84,32 @@
         <div class="form-group row">
             <div class="col-6">
                 <div class="col-12">
-                    <h6>City</h6>
+                    <label asp-for="PersonCity" class="control-label"></label>
                 </div>
                 <div class="col-12">
-                    <select asp-for="PersonProperties.PersonCity" class="form-control" asp-items="Html.GetEnumSelectList<City>()">
+                    <select asp-for="PersonCity" class="form-control" asp-items="Html.GetEnumSelectList<City>()">
                         <option selected="selected" value="">Please select</option>
                     </select>
                 </div>
             </div>
             <div class="col-6">
                 <div class="col-6">
-                    <h6>PostalCode</h6>
+                    <label asp-for="PersonPostalCode" class="control-label"></label>
                 </div>
                 <div class="col-12">
-                    <input asp-for="PersonProperties.PersonPostalCode" class="form-control" placeholder="PostalCode" />
-                    <span asp-validation-for="PersonProperties.PersonPostalCode" class="text-denger"></span>
+                    <input asp-for="PersonPostalCode" class="form-control" placeholder="PostalCode" />
+                    <span asp-validation-for="PersonPostalCode" class="text-denger"></span>
                 </div>
             </div>
         </div>
         <div class="form-group row">
 
             <div class="col-6">
-                <h6>Street Address</h6>
+                <label asp-for="PersonStreetAddress" class="control-label"></label>
             </div>
             <div class="col-12">
-                <input asp-for="PersonProperties.PersonStreetAddress" class="form-control" />
-                <span asp-validation-for="PersonProperties.PersonStreetAddress" class="text-denger"></span>
+                <input asp-for="PersonStreetAddress" class="form-control" />
+                <span asp-validation-for="PersonStreetAddress" class="text-denger"></span>
             </div>
 
         </div>
@@ -118,30 +118,29 @@
         </div>
         <div class="form-group row">
             <div class="col-6">
-                <h6>Old Password</h6>
+                <label asp-for="PersonOldPassword" class="control-label"></label>
             </div>
             <div class="col-12">
-                <input asp-for="PersonProperties.PersonOldPassword" class="form-control" />
-                <span asp-validation-for="PersonProperties.PersonOldPassword" class="text-denger"></span>
+                <input asp-for="PersonOldPassword" class="form-control" />
+                <span asp-validation-for="PersonOldPassword" class="text-denger"></span>
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-6">
-                <h6>New Password</h6>
+                <label asp-for="PersonNewPassword" class="control-label"></label>
             </div>
             <div class="col-12">
-                <input asp-for="PersonProperties.PersonNewPassword" class="form-control" />
-                <span asp-validation-for="PersonProperties.PersonNewPassword" class="text-denger"></span>
+                <input asp-for="PersonNewPassword" class="form-control" />
+                <span asp-validation-for="PersonNewPassword" class="text-denger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-9"></div>
-            <div class="col-3">
+            <div>
                 <input type="submit" value="Submit" class="btn btn-success" />
             </div>
-        </div>     
-                   
+        </div>
+
     }
-</body>
-</html>
+

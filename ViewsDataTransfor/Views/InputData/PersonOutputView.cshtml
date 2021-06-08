@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ViewsDataTransfor.Models.PersonPropertie;
+<h2>Person Details</h2>
+<div >
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="PersonFullName" class="form-control border-0"></label>
+        </div>
+        <div>
+          :  @Model.PersonFullName
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="PersonEmail" class="form-control border-0"></label>
+        </div>
+        <div>
+          :  @Model.PersonEmail
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="PersonPhoneNumber" class="form-control border-0"></label>
+        </div>
+        <div>
+            @Model.PersonPhoneNumber
+        </div>
+    </div>
+</div>
+<table class="table table-responsive ">
+    <tr>
+        <td>
+            <label asp-for="PersonFullName" class="form-control border-0"></label>
+        </td>
+        <td>
+          :  @Model.PersonFullName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonEmail" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonEmail</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonPhoneNumber" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonPhoneNumber</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonPlan" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonPlan</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonBillingIntervel" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonBillingIntervel</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonCountry" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonCountry</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonState" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonState</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonCity" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonCity</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonStreetAddress" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonStreetAddress</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonPostalCode" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonPostalCode</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonOldPassword" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonOldPassword</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="PersonNewPassword" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.PersonNewPassword</td>
+    </tr>
+</table>

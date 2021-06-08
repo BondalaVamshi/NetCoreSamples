@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ViewsDataTransfor.Models.BusinessPropertie;
+<h2>Business Details</h2>
+<div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="BusinessFullName" class="form-control border-0"></label>
+        </div>
+        <div>
+            :  @Model.BusinessFullName
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="BusinessEmail" class="form-control border-0"></label>
+        </div>
+        <div>
+            :  @Model.BusinessEmail
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="BusinessPhoneNumber" class="form-control border-0"></label>
+        </div>
+        <div>
+            @Model.BusinessPhoneNumber
+        </div>
+    </div>
+</div>
+<table class="table table-responsive ">
+    <tr>
+        <td>
+            <label asp-for="BusinessFullName" class="form-control border-0"></label>
+        </td>
+        <td>
+            :  @Model.BusinessFullName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessEmail" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessEmail</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessPhoneNumber" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessPhoneNumber</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessPlan" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessPlan</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessBillingIntervel" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessBillingIntervel</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessCountry" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessCountry</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessState" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessState</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessCity" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessCity</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessStreetAddress" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessStreetAddress</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessPostalCode" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessPostalCode</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessOldPassword" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessOldPassword</td>
+    </tr>
+    <tr>
+        <td>
+            <label asp-for="BusinessNewPassword" class="form-control border-0"></label>
+        </td>
+        <td>: @Model.BusinessNewPassword</td>
+    </tr>
+</table>
