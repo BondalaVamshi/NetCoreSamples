@@ -8,10 +8,13 @@ namespace BusinessFormTask.Models
 {
     public class PersonPropertie
     {
-        [Required(ErrorMessage = "Please enter FullName")]
-        [DataType(DataType.Text)]
-        [Display(Name = "Personfullname")]
-        [MaxLength(100), MinLength(1)]
+        //[Required(ErrorMessage = "Please enter FullName")]
+        //[DataType(DataType.Text)]
+        //[Display(Name = "Personfullname")]
+        //[MaxLength(100), MinLength(1)]
+
+
+        [Key]
         public string PersonFullName { get; set; }
 
         [DataType(DataType.EmailAddress)]

@@ -28,7 +28,6 @@ namespace ViewsDataTransfor.Controllers
             
         //}
         [HttpPost]
-s
         public IActionResult PersonOutputView(PersonPropertie person)
         {
             //InputDataOutput inputDataOutput = TempData["inputOutput"] as InputDataOutput;

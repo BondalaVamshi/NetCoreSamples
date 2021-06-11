@@ -12,19 +12,19 @@ namespace BusinessFormTask.Controllers
     {
         [BindProperty]
         public PersonPropertie PersonPropertie { get; set; }
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public string Output(PersonPropertie person)
+        public JsonResult Output(PersonPropertie person)
         {
-            if (ModelState.IsValid)
-            {
+                //string Name = person.PersonFullName;
+                //string EMail = person.PersonEmail;
+                return Json(person);
+            //if (ModelState.IsValid)
+            //{
 
-                string Name = person.PersonFullName;
-                string EMail = person.PersonEmail;
-                return "Name: " + Name + "EMail: " + EMail;
-            }
-            return "Give Proper input";
+            //}
+            //return "Give Proper input";
         }
         public IActionResult Index()
         {

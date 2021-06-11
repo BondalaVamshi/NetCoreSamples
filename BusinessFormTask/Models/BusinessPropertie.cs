@@ -12,11 +12,15 @@ namespace BusinessFormTask.Models
         //[Required(ErrorMessage = "Please enter Email ID")]
         ////@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
         //[RegularExpression(@"^[0-9A-Za-z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z0-9]+[.][a-zA-Z]{2.3}([a-zA-Z]{2,3}){0,1}", ErrorMessage = "Email is not valid.")]
+       
+        [Required]
         public string BusinessEmail { get; set; }
 
         //[Required]
         //[RegularExpression(@"^(\d{10})$", ErrorMessage = "Please enter PhoneNumber")]
         //[DataType(DataType.PhoneNumber)]
+        [Key]
+        [Required]
         public string BusinessPhoneNumber { get; set; }
         //[Required(ErrorMessage = "Please Enter Your Plan")]
         public string BusinessPlan { get; set; }

@@ -1,0 +1,18 @@
+﻿@page
+@model UnitTest.Pages.TemparatureModel
+@{
+}
+<div>
+    <h1>TemparatureToFahrenheit</h1>
+    <form name="TemparatureForm" id="TemparatureForm" method="post'">
+        temparatue[Celcious]:
+        <br />
+        <input name="TemparatureCelcious" type="number" class="form-control input-group-lg" autofocus required value="@Model.temparatureFahrenheit" />
+        <br />
+        temparatue[Fahrenheit]:
+        <br />
+        <input name="TemparatureFahrenheit" type="number" class="form-control input-group-lg" autofocus required value="@Model.temparatureFahrenheit" />
+        <br />
+        <input id="ConvertButton" type="submit" value="convert" class="btn btn-info" />
+    </form>
+</div>
