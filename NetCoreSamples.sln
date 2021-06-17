@@ -20,7 +20,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjection", "Depe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{86211261-D010-4CD2-A6B5-FF59A2AC1B9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateManagement", "StateManagement\StateManagement.csproj", "{6E5BDE6F-F4FE-4E3D-8A29-1C6A0FEE52FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateManagement", "StateManagement\StateManagement.csproj", "{6E5BDE6F-F4FE-4E3D-8A29-1C6A0FEE52FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionResults", "ActionResults\ActionResults.csproj", "{6EB66F12-7A22-4559-B033-9F99119AD311}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorSyntaxRefence", "RazorSyntaxRefence\RazorSyntaxRefence.csproj", "{6A7B0FAD-520F-4288-9933-2837E80D285C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLibraryProgram", "RazorClassLibraryProgram\RazorClassLibraryProgram.csproj", "{CD67499C-886D-4445-ABD8-A93513192AE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +62,18 @@ Global
 		{6E5BDE6F-F4FE-4E3D-8A29-1C6A0FEE52FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E5BDE6F-F4FE-4E3D-8A29-1C6A0FEE52FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E5BDE6F-F4FE-4E3D-8A29-1C6A0FEE52FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB66F12-7A22-4559-B033-9F99119AD311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB66F12-7A22-4559-B033-9F99119AD311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB66F12-7A22-4559-B033-9F99119AD311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB66F12-7A22-4559-B033-9F99119AD311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7B0FAD-520F-4288-9933-2837E80D285C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7B0FAD-520F-4288-9933-2837E80D285C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7B0FAD-520F-4288-9933-2837E80D285C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7B0FAD-520F-4288-9933-2837E80D285C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD67499C-886D-4445-ABD8-A93513192AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD67499C-886D-4445-ABD8-A93513192AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD67499C-886D-4445-ABD8-A93513192AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD67499C-886D-4445-ABD8-A93513192AE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

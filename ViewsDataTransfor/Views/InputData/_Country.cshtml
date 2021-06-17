@@ -1,0 +1,9 @@
+﻿@*@model ViewsDataTransfor.Models.PersonPropertie*@
+@model LocationRepository.Location
+<form method="post">
+    <select asp-for="CountryProp" class="form-control" asp-items=" ViewBag.Country as List<ViewBag.Country>">
+        <option selected="selected" value="">Please select</option>
+    </select>
+    @*@Html.DropDownList("Country ", ViewBag.Country as List<Country>)*@
+    @*@Html.DropDownList("Country", @ViewData["Country"] as List<SelectListItem>)*@
+</form>

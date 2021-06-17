@@ -1,0 +1,41 @@
+﻿<h1 class="bg-light text-warning">Conditional Statements</h1>
+@if (true)
+{
+    <h6>This is conditional statements</h6>
+}
+
+
+@{
+    int a = 10;
+    int n1 = 10;
+    int n2 = 0;
+}
+@if (n1 >= 10)
+{
+    @a
+    a++;
+    <h6>Output from 'if' block=@a</h6>
+}
+else
+{
+    <h6>Output from 'else' block</h6>
+}
+
+<h5>Ternary Operaator</h5>
+<h5>Ternary-@(n1>10?n2=20:n2=10)</h5>
+<h5>The value of n1 is  @n1 then n1 is @n2  </h5>
+
+
+<h5>Switch case</h5>
+@switch (n1)
+{
+    case 1:<h6>n1 is 1</h6>
+        break;
+    case 2:<h6>n1 is 2</h6>
+        break;
+    case 10:<h6>n1 is 10</h6>
+        break;
+    default:
+        <h5>I an default from switch</h5>
+        break;
+}

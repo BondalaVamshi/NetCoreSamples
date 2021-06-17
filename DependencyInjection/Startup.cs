@@ -26,7 +26,7 @@ namespace DependencyInjection
         {
            
             services.AddSingleton<IDateTime,SystemDateTime>();
-            services.Configure<SampleWebSettings>(Configuration);
+           // services.Configure<SampleWebSettings>(Configuration);
             services.AddControllersWithViews();
         }
 

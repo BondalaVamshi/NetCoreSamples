@@ -1,0 +1,13 @@
+﻿<h2>This is IActionResults</h2>
+@model ActionResults.Models.Employee;
+<div class="container">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <button value="SubmitValue" type="submit">Submit</button>
+</div>
+<div>
+    @Html.Partial("__PartialViewR")
+</div>
+<div>
+    @Html.Partial("ContentR")
+</div>

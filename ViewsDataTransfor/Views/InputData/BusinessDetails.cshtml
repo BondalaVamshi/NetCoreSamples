@@ -7,6 +7,7 @@
 
 @using (Html.BeginForm("BusinessOutputView", "InputData", FormMethod.Post))
 {
+
     <table class="table table-responsive table-bordered">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <h1>Business details</h1>
@@ -94,9 +95,11 @@
                                     <label asp-for="BusinessCountry" class="control-label"></label>
                                 </div>
                                 <div class="col-12">
-                                    <select asp-for="BusinessCountry" class="form-control" asp-items="Html.GetEnumSelectList<Country>()">
+
+                                    @*@Html.DropDownList("Country", ViewData["country"] as List<SelectListItem>)*@
+                                   /@*/ <select asp-for="BusinessCountry" class="form-control" asp-items="Html.GetSelectList<Country>()">
                                         <option selected="selected" value="">Please select</option>
-                                    </select>
+                                    </select>*@
                                 </div>
                             </div>
                             <div class="col-6">
@@ -104,9 +107,9 @@
                                     <label asp-for="BusinessState" class="control-label"></label>
                                 </div>
                                 <div class="col-12">
-                                    <select asp-for="BusinessState" class="form-control" asp-items="Html.GetEnumSelectList<State>()">
+                                    @*<select asp-for="BusinessState" class="form-control" asp-items="Html.GetEnumSelectList<State>()">
                                         <option selected="selected" value="">Please select</option>
-                                    </select>
+                                    </select>*@
                                 </div>
                             </div>
                         </div>
@@ -116,9 +119,9 @@
                                     <label asp-for="BusinessCity" class="control-label"></label>
                                 </div>
                                 <div class="col-12">
-                                    <select asp-for="BusinessCity" class="form-control" asp-items="Html.GetEnumSelectList<City>()">
+                                    @*<select asp-for="BusinessCity" class="form-control" asp-items="Html.GetEnumSelectList<City>()">
                                         <option selected="selected" value="">Please select</option>
-                                    </select>
+                                    </select>*@
                                 </div>
                             </div>
                             <div class="col-6">
@@ -183,11 +186,11 @@
 
                     </div>
                     <div class="col-3">
-                                <input type="submit" value="Submit" class="btn btn-success" />
+                        <input type="submit" value="Submit" class="btn btn-success" />
                         @*<div class="form-group row">
-                            <div class="col-3">
-                            </div>
-                        </div>*@
+                                <div class="col-3">
+                                </div>
+                            </div>*@
             </table>
         </tr>
     </table>
@@ -370,4 +373,5 @@
             </tr>
         </table>*@
 }
+
 

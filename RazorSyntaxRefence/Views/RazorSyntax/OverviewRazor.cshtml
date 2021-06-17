@@ -1,0 +1,58 @@
+﻿<h1>Welcome to Razor</h1>
+
+
+
+
+
+<h6>The time is</h6>
+<p>@DateTime.Now</p>
+<p>@DateTime.Now.ToString("dd/mm/yyyy")</p>
+<p>sum(3+5)=@(3+5)</p>
+<hr />
+
+<h5>Multiline</h5>
+@{
+    int a = 10;
+    int b = 20;
+    int c = a + b;
+}
+<p>The sum of a+b is @c</p>
+<h6>Email-vamshi@gmail.com</h6>
+<h6>t@h</h6>
+@*<p>@h</p> <p>a @h</p>*@
+<hr />
+<h5>Escape Sequence</h5>
+@*<h6>Twitter-@Vamshi</h6>*@
+<h6>Twitter -@@Vamshi</h6>
+
+
+<hr />
+hello
+
+
+@{
+    var quote = "The future depends on what you do today. - Mahatma Gandhi";
+}
+
+<p>@quote</p>
+
+@{
+    quote = "Hate cannot drive out hate, only love can do that. - Martin Luther King, Jr.";
+}
+<p>@quote</p>
+
+<span>Hello World</span>
+@("<span>Hello World</span>")
+@Html.Raw("<span>Hello World</span>")
+<p>Name: <strong>Mahatma Gandhi</strong></p>
+<p>Name: <strong>Martin Luther King, Jr.</strong></p>
+
+<h2>Functions</h2>
+@functions {
+    public string GetHello()
+    {
+        return "Hello";
+    }
+}
+
+<div>From method: @GetHello()</div> 

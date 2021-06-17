@@ -38,10 +38,10 @@ namespace DependencyInjection.Controllers
         }
         //The FromServicesAttribute enables injecting a service directly into an
         //action method without using constructor injection
-        public IActionResult UsingFromServices([FromServices] IDateTime dateTime)
-        {
-            return Content($"The time is {dateTime.Now.TimeOfDay}");
-        }
+        //public IActionResult UsingFromServices([FromServices] IDateTime dateTime)
+        //{
+        //    return Content($"The time is {dateTime.Now.TimeOfDay}");
+        //}
 
     }
 }
