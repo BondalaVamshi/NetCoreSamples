@@ -1,0 +1,40 @@
+﻿@model Employee
+<form method="post" asp-action="EmpDetails" asp-controller="Employee">
+    <div>
+        <label asp-for="Name"></label>
+        <br />
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>   
+    <div>
+        <label asp-for="Location"></label>
+        <br />
+        <select asp-for="Location">
+            <option>Hyderabad</option>
+            <option>Chennai</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+        </select>
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+    @*<textarea asp-for="Address" />*@
+    <div>
+        <label asp-for="Address"></label>
+        <br />
+
+        <textarea asp-for="Address" placeholder="Adress"></textarea>
+    </div>
+    @{ 
+        var parameter = new Dictionary<string, string>()
+        {
+            {"name","Ravan"},
+            {"company","cognine" },
+            {"address","hyderabad" }
+        };
+    }
+    <a asp-all-route-data="@parameter">RoutAllData</a>
+    <input type="submit" value="Submit" />
+
+
+
+</form>

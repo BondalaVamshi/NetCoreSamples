@@ -1,0 +1,36 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form method="post">
+
+
+    <div>
+        <label asp-for="Name"></label>
+        <br />
+        <input asp-for="Name" />
+        @*<span asp-validation-for="Name" class="text-danger"></span>*@
+    </div>
+    @*<label asp-for="Address"></label>
+        <input asp-for="Address" />*@
+
+    <div>
+        <label asp-for="Location"></label>
+        <br />
+
+        <input asp-for="Location" />
+    </div>
+    @*<textarea asp-for="Address" />*@
+    <div>
+        <label asp-for="Address"></label>
+        <br />
+
+        <textarea asp-for="Address"></textarea>
+    </div>
+    <input type="submit" value="Submit" />
+    <p>
+        <a asp-action="Emp" asp-controller="Employee">Emp</a>
+    </p>
+</form>
+

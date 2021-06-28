@@ -1,0 +1,29 @@
+﻿@model Employee;
+@{
+    ViewData["Title"] = "EmpDetails";
+}
+
+<h1>EmpDetails</h1>
+<div>
+    <label asp-for="Name"></label>
+    <br />
+    :@Model.Name
+    <br />
+    <label asp-for="Location"></label>
+    <br />
+    :@Model.Location
+    <br />
+    <label asp-for="Address"></label>
+    <br />
+    :@Model.Address
+    <br />
+    <strong>Approved</strong>
+    <Website-InforMation info="Model" />
+    <address>
+    One Microsoft Way<br />
+    Redmond, WA 98052<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+    </address>
+</div>
+

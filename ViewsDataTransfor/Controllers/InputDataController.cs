@@ -21,6 +21,7 @@ namespace ViewsDataTransfor.Controllers
         }
         
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult PersonOutputView(PersonPropertie person)
         {
                     //TempData["inputOutput"] = inputDataOutput;

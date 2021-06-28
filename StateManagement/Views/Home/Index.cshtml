@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Employee
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,3 +7,30 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<h1>Login</h1>
+
+<form asp-action="Login" asp-controller="Home">
+    <div>
+        <div>
+            <label asp-for="Id"></label>
+        </div>
+        <div>
+            <input asp-for="Id" />
+        </div>
+        <div>
+            <label asp-for="Name"></label>
+        </div>
+        <div>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="Job"></label>
+        </div>
+        <div>
+            <input asp-for="Job" />
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    </div>
+</form>
