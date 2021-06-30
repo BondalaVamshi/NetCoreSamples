@@ -1,0 +1,59 @@
+﻿@model HtmlHelpers.Models.Student
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Html Helpers</h1>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>Index
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("DisplayStudent", "Home"))
+        {
+            @Html.LabelFor(m => m.StudentId)<br />
+            @Html.HiddenFor(m => m.StudentId)<br />
+
+            @Html.LabelFor(m => m.StudentName)
+            <br />
+            @Html.TextBoxFor(m => m.StudentName) <br />
+            @Html.LabelFor(m => m.Age)<br />
+            @Html.TextBoxFor(m => m.Age)
+            <br />
+            @Html.LabelFor(m => m.Description)<br />
+            @Html.TextAreaFor(m => m.Description)
+            @*<textarea asp-for="Description"></textarea>*@
+            <br />
+            @Html.LabelFor(m => m.isNewlyEnrolled) <br />
+            @Html.CheckBoxFor(m => m.isNewlyEnrolled)<br />
+            @Html.LabelFor(m => m.Gender)<br />
+            @Html.RadioButtonFor(m => m.Gender, "Male")
+            @Html.RadioButtonFor(m => m.Gender, "FeMale")
+            <br />
+           <label>FatherName:</label>
+            @Html.LabelFor(m => m.Password)<br />
+            <label>Password :</label><br />
+            
+            <%Password :/>
+            @Html.PasswordFor(m => m.Password)<br />
+
+
+            @*<input type="password" asp-for="Password" />*@
+            @*@Html.DisplayFor(m=>m.Password)*@
+            @*@Html.LabelFor(m => m.StudentId)<br />
+            @Html.EditorFor(m => m.StudentId) <br />
+            @Html.LabelFor(m => m.StudentName)<br />
+            @Html.EditorFor(m => m.StudentName) <br />*@
+
+            <div class="form-row">
+
+                <div class="col col-3">
+                    <button type="submit" class="form-control bg-primary text-white">Submit</button>
+                </div>
+            </div>
+        }
+
+    </div>
+</body>
+</html>

@@ -28,7 +28,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorSyntaxRefence", "Razor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorClassLibraryProgram", "RazorClassLibraryProgram\RazorClassLibraryProgram.csproj", "{CD67499C-886D-4445-ABD8-A93513192AE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagHelpers", "TagHelpers\TagHelpers.csproj", "{8CAD0DE7-3314-4160-A140-29697677CAA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TagHelpers", "TagHelpers\TagHelpers.csproj", "{8CAD0DE7-3314-4160-A140-29697677CAA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlHelpers", "HtmlHelpers\HtmlHelpers.csproj", "{A4E9B1D6-DFF6-4156-9403-8EB607F03CEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +82,10 @@ Global
 		{8CAD0DE7-3314-4160-A140-29697677CAA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CAD0DE7-3314-4160-A140-29697677CAA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CAD0DE7-3314-4160-A140-29697677CAA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E9B1D6-DFF6-4156-9403-8EB607F03CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E9B1D6-DFF6-4156-9403-8EB607F03CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E9B1D6-DFF6-4156-9403-8EB607F03CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E9B1D6-DFF6-4156-9403-8EB607F03CEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

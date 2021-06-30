@@ -4,19 +4,18 @@
 }
 
 <form method="post">
-
-
     <div>
         <label asp-for="Name"></label>
         <br />
         <input asp-for="Name" />
-        @*<span asp-validation-for="Name" class="text-danger"></span>*@
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     @*<label asp-for="Address"></label>
         <input asp-for="Address" />*@
 
     <div>
         <label asp-for="Location"></label>
+
         <br />
 
         <input asp-for="Location" />
@@ -25,12 +24,67 @@
     <div>
         <label asp-for="Address"></label>
         <br />
-
         <textarea asp-for="Address"></textarea>
     </div>
-    <input type="submit" value="Submit" />
-    <p>
-        <a asp-action="Emp" asp-controller="Employee">Emp</a>
-    </p>
+    <br />
+    Password:
+    <br />
+    <input type="password" asp-for="Password" />
+
+    <span asp-validation-for="Password" class="text-danger"></span>
+    <br />
+    EMail:
+    <br />
+    <input type="email" data-val="true"
+           data-val-email="The Email Address field is not a valid email address."
+           data-val-required="The Email Address field is required."
+           asp-for="EMail">
+    <span asp-validation-for="EMail"></span>
+    <br />
+    <label asp-for="Phone"></label>
+    <br />
+    <input type="tel" asp-for="Phone" />
+    <span asp-validation-for="Phone"></span>
+    <br />
+    Country List:
+    <br />
+    <select asp-for="Country" asp-items="Model.Countries"></select>
+    <br />
+    Country Direct:
+    <br />
+    <select id="CountryCodes"
+            @*multiple="multiple"*@
+            name="CountryCodes">
+        <option value="">--Select--</option>
+        <option value="MX">Mexico</option>
+        <option value="CA">Canada</option>
+        <option value="US">USA</option>
+        <option value="FR">France</option>
+        <option value="ES">Spain</option>
+        <option value="DE">Germany</option>
+    </select>
+    <br />
+    Sates:
+    <br />
+    <select asp-for="Sates" asp-items="Html.GetEnumSelectList<SatesEnum>()"></select>
+    <br />
+    Image:
+    <br />
+    <img src="~/Imges/Honey.jpg" asp-append-version="true" height="200" />
+    <br />
+    <input type="submit" value="submit" />
+    <button type="submit">
+        <img src="~/Imges/Honey.jpg" asp-append-version="true" height="50" />
+
+    </button>
+    <br />
+    <a asp-route="AnchorTags">AnchorTags</a>
+
+    <br />
+    <a asp-controller="Employee" asp-action="Cache">Cache</a>
+    <br />
+    <a asp-controller="Employee" asp-action="Emp">Emp</a>
+    <br />
+    <a asp-controller="Employee" asp-action="Environment">Environment</a>
 </form>
 

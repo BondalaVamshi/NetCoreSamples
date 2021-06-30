@@ -10,7 +10,7 @@
         <label asp-for="Location"></label>
         <br />
         <select asp-for="Location">
-            <option>Hyderabad</option>
+            <option hidden>Hyderabad</option>
             <option>Chennai</option>
             <option>Mumbai</option>
             <option>Delhi</option>
@@ -33,6 +33,14 @@
         };
     }
     <a asp-all-route-data="@parameter">RoutAllData</a>
+    <br />
+
+    <strong>Custom TagHelpers</strong>
+   <My-EMail mail-to="ravan">ravan</My-EMail>
+
+
+
+
     <input type="submit" value="Submit" />
 
 

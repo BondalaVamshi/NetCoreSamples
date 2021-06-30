@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Cache";
+}
+
+<h1>Cache</h1>
+DateTime :
+<br />
+<cache>@DateTime.Now.Date</cache>
+<br />
+Parameters:
+<br />
+<cache enabled="false">
+    @DateTime.Now
+</cache>
+<br />
+<cache expires-on="@new DateTime(2021,6,29,12,58,0)">
+
+    Current Time : @DateTime.Now
+</cache>
+<br />
+<cache expires-after="@TimeSpan.FromSeconds(30)">
+    Expires after : @DateTime.Now
+</cache>
+<br />
+<cache vary-by-header="User-Agent">
+    vary-by-header : @DateTime.Now
+</cache>
+<br />
+<distributed-cache name="my-distributed-cache-unique-key-101">
+    Time Inside Cache Tag Helper: @DateTime.Now
+</distributed-cache>
+<br />
+@*<environment names="Staging,Production">
+    <strong>IWebHostEnvironment.EnvironmentName is Staging or Production</strong>
+</environment>*@
+<environment include="Development">
+    <strong>IWebHostEnvironment.EnvironmentName is for Development</strong>
+</environment>
+
+
+

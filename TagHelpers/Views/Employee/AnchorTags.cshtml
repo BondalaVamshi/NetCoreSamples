@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "AnchorTags";
+}
+
+<h1>AnchorTags</h1>
+
+<br />
+    Emp Action:
+<br />
+<a asp-action="Emp" asp-controller="Employee">Emp</a>
+<br />
+    Emp Route:
+<br />
+<a asp-route="DifferentTags">DifferentTags</a>
+<br />
+    RoutAllData:
+@{
+    var parms = new Dictionary<string, string>
+{
+                { "EmployeeId", "11" },
+                { "Trainee", "true" }
+            };
+}
+<br />
+<a asp-route="RoutAllData" asp-all-route-data="parms">RoutAllData</a>
+<br />
+<a asp-protocol="https"
+   asp-host="microsoft.com"
+   asp-controller="Home"
+   asp-action="About">About</a>
+
